@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">广告拦截器</string>
+    <string name="accessibility_service_description">
+        该服务用于检测并自动关闭广告弹窗。
+        请启用此服务以允许应用监控窗口变化并关闭检测到的广告弹窗。
+    </string>
+</resources>

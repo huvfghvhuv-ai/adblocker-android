@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".RuleManagementActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="广告规则管理"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Add new rule form -->
+    <CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_use="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_use:cardCornerRadius="8dp"
+        card_use:cardElevation="4dp"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/packageNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="包名正则 (例如: .*com\\.android\\.vending.*)"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/keywordsEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="关键词 (用逗号分隔,例如: 广告,推荐,赞助)"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/buttonTextsEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="关闭按钮文字 (用逗号分隔,例如: 关闭,跳过,×)"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/addRuleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="添加规则"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </CardView>
+
+    <!-- Rules list -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前规则"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rulesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="4dp"/>
+
+</LinearLayout>
